@@ -1,0 +1,9 @@
+es:
+  sessions:
+    new:
+      login: Login
+      password: Contraseña
+      log_in: Entrar
+  posts:
+    new:
+      create: Publicar

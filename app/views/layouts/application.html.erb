@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+	<meta name="keywords" content="<%= KEYWORDS %>">
+	<meta name="description" content="<%= DESCRIPTION %>">
+  <title><%= SITE_NAME %></title>
+  <%= stylesheet_link_tag 'application' %>
+  <%= javascript_include_tag :defaults %>
+ </head>
+
+<body>
+	<ul id="tabnav">
+		<li class="tab1">
+			<%= link_to 'Portada', '/', :class => controller_name == 'posts' ? 'selected' : ''%>
+    </li>
+		<li class="tab2"><a href="index2.html">Portofolio</a></li>
+		<li class="tab3"><a href="index3.html">Contacto</a></li>
+	</ul>
+	
+	<div id="wrapper">
+    <div id="header">
+	  	<div id="logo">
+	      <h1><%= link_to SITE_NAME, '/' %></h1>
+		  </div>
+		  <div id="menu">
+		    <ul>
+		    </ul>
+	    </div>
+	  </div>	<!-- end #header -->
+
+    <div id="page">
+		  <div id="content" style="width:auto;">
+			  <div class="post">	
+				  <div class="flash_message">
+					  <%#= my_flash_message(flash) %>
+		      </div>	   
+				  <div class="clear"></div>
+				  <%= yield  %>
+			  </div>
+		  </div> <!-- end #content -->
+	    <div id="sidebar">
+				  <div id="sidebar-bgtop"></div>
+				  <div id="sidebar-content">
+					  <div id="sidebar-bgbtm">
+					    <ul>
+					      <li id="search">
+						      <h3><%= t(:Search_title)%></h3>
+									<% @post = Post.new %>
+							    <% form_for @post, 
+							    :url => { :controller => "posts", :action => "index" }   do |f| %>
+								    <fieldset>
+								    </fieldset>
+           				<% end %>
+					      </li>
+          		</ul>
+        		</div>
+				  </div>
+  		</div> 	<!-- end #sidebar -->
+		<div class="clear"></div>
+	  </div>	<!-- end #page -->	
+  </div>
+
+  <div id="footer">
+    <p>
+      Este blog es un proyecto personal de
+	    <%= link_to 'Juan de Frías', home_path %>
+	  </p>
+  </div>
+  
+</body>
+</html>
