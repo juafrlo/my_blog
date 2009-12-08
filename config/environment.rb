@@ -33,7 +33,7 @@ Rails::Initializer.run do |config|
 
   # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
   # Run "rake -D time" for a list of tasks for finding time zone names.
-  config.time_zone = 'Madrid'
+  config.time_zone = "Madrid"
   SITE_NAME = 'Juan de Frías'
   KEYWORDS = "Juan de Frías, blog, Ruby on Rails, tecnología, desarrollo ágil"
   DESCRIPTION = "Blog de Juan de Frías sobre desarrollo ágil web, con especial atención a Ruby on Rails"

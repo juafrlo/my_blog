@@ -1,0 +1,5 @@
+<div class="post_block">
+	<%= date_block(post.created_at.to_date) %>
+	<h2><%= post_title post %></h2>
+	<div class="post_body"><%= post.body %></div>
+</div>

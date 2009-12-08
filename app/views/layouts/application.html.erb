@@ -9,6 +9,8 @@
   <title><%= SITE_NAME %></title>
   <%= stylesheet_link_tag 'application' %>
   <%= javascript_include_tag :defaults %>
+  <%= javascript_include_tag "textarea" %>
+
  </head>
 
 <body>
@@ -32,7 +34,7 @@
 	  </div>	<!-- end #header -->
 
     <div id="page">
-		  <div id="content" style="width:auto;">
+		  <div id="content">
 			  <div class="post">	
 				  <div class="flash_message">
 					  <%#= my_flash_message(flash) %>

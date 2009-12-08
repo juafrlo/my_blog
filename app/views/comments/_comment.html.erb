@@ -1,0 +1,12 @@
+<div class="comment" id=<%="comment_#{comment.id}"%>>
+	<div class="avatar"><%= comment_avatar(comment) %></div>
+	<div class="content">
+    <span>
+      <%= comment_name(comment) %>
+      <%= comment_site_url(comment) %>
+    </span>
+    <span class="date"><%= l comment.created_at.to_time, :format => :custom %></span>
+    <span><%= delete_comment(comment) %></span>
+    <div><%= comment.body %></div>
+	</div>
+</div>

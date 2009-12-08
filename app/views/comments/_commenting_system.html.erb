@@ -1,0 +1,36 @@
+<h3><%= t('.Comments') %></h3>
+<%= render @post.comments %>
+
+<div id="newest_comment"></div>
+
+<h3 id="send_new_comment"><%= t('.New_comment') %></h3>
+<% form_remote_for @comment do |f| %>
+   <div id="form_errors"></div>
+
+  <%= f.hidden_field :post_id, :value => @post.id %>
+  <p>
+    <span><%= f.label :name, t('.name') %></span>
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+	  <span><%= f.label :email %></span>
+	  <%= f.text_field :email %>
+	</p>
+
+  <p>
+	  <span><%= f.label :site_url, t('.site_url') %></span>
+	  <%= f.text_field :site_url %>
+	</p>
+	
+	<p>
+		<span><%= f.label :body, t('.body') %></span>
+		<%= f.text_area :body %>
+	</p>
+	
+	<p>
+		<%= f.submit t('.send'), :class => 'submit' %>
+	<p>
+<% end %>
+
+<%= render :partial => 'comments/textarea_script' %>

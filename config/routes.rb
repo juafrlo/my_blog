@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :comments, :only => [:create, :destroy]
+
   map.resources :posts
 
   # The priority is based upon order of creation: first created -> highest priority.

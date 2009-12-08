@@ -1,0 +1,6 @@
+class Comment < ActiveRecord::Base
+  belongs_to :post
+  validates_presence_of :body
+  validates_presence_of :name
+  validates_format_of   :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i, :if => Proc.new{|c| !c.email.blank?}   
+end

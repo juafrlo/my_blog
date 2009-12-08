@@ -1,0 +1,14 @@
+<% form_for @post do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :title, t('posts.title') %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :body, t('posts.body') %><br />
+    <%= f.text_area :body %>
+  </p>
+  <p>
+    <%= f.submit text, :class => 'submit' %>
+  </p>
+<% end %>

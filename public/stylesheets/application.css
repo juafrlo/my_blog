@@ -29,6 +29,7 @@ h1, h2, h3 {
 
 h2{
 	font-size: 1.8em;
+	padding-top: 10px;
 }
 
 h1 {
@@ -177,7 +178,7 @@ a img {
 
 #content {
 	float: left;
-	width: 570px;
+	width: 600px;
 }
 
 .post {
@@ -324,7 +325,6 @@ a img {
 }
 
 #footer a {
-	color: #FFFFFF;
 }
 
 
@@ -367,6 +367,7 @@ a img {
 .little_search_time{
 	padding-bottom: 40px;
 }
+
 
 input{
     width: 500px;
@@ -572,7 +573,7 @@ p.comment-box text area{
 	margin: 5px 0px 8px 0px;
 	color:#BB0000;
 	float:left;
-	width: 98%;
+	width: 492px;
 }
 
 .errorExplanation h2{
@@ -586,12 +587,11 @@ p.comment-box text area{
 }
 
 .errorExplanation ul {
-    line-height: 100%;
-    margin-bottom: 7px;
+    margin-bottom: 0px;
 }
 
-.errorExplanation ul {
-    line-height: 120%;
+.errorExplanation ul li{
+	padding-top: 10px;
 }
 
 .fieldWithErrors{
@@ -610,14 +610,6 @@ fieldset{
 
 
 
-#noticias {
-}
-
-
-#noticias p,h3,h4{
-	margin:0px;
-	padding: 0px;
-}
 
 #noticias ul{
 	list-style:none;
@@ -1090,6 +1082,7 @@ p.no_results_found{
 	padding-left: 6px;
 	color: red;
 	padding-top: 1px;
+	display: inline !important;
 }
 
 .autor{
@@ -1179,4 +1172,99 @@ background: #fff; /* set desired hover color */
 /* end css tabs */
 
 
+/* Date block */
+div.dateblock{
+	line-height: 1.02em;
+	width: 40px;
+	float: left;
+	margin-top: 6px;
+	background: #F3F3F3;
+	border-top: 1px solid #eee;
+	border-left: 1px solid #eee;
+	border-right: 1px solid #bbb;
+	border-bottom: 1px solid #bbb;
+	color: #aaa;
+	text-align: center;
+	margin-right: 10px;
+	letter-spacing: 0.17em;
+	font-family: Arial, Verdana, sans;
+	padding: 1px;
+}
+span.dateblock_mon{
+	font-size: 9px;
+	display: block;
+	text-align: center;
+	color: #999;
+	font-family: Georgia, Arial, Verdana, sans;
+}
+span.dateblock_day{
+	font-weight: bold;
+	font-size: 15px;
+	display: block;
+	font-family: Georgia, Arial, Verdana, sans;
+	text-align: center;
+	position: relative;
+	top: -1px;
+	color: #336;
+}
+span.dateblock_year{
+	font-size: 9px;
+	display: block;
+	text-align: center;
+	color: #999;
+	font-family: Georgia, Verdana, Arial, sans;
+}
+/* End of date block */
+
+.post_block{
+	margin-bottom:40px;
+}
  
+/* Comments */
+.comment{
+	display:block;
+}
+
+.comment .avatar{
+	float:left;
+}
+
+.comment .avatar img{
+	width: 50px;
+	margin-top: 4px;
+}
+
+.comment .content{
+	margin-left: 65px;
+}
+
+.comment .content div{
+	margin-top: 7px;
+}
+
+.comment .content span.date{
+	color: #777;
+	display: block;
+}
+
+
+#send_new_comment {
+  padding-top: 40px;
+  display: block;
+  clear: left;
+
+}
+
+.new_comment{
+  margin-left: 65px;
+}
+
+.new_comment span{
+	display:block;
+	width: 250px; 
+}
+
+.new_comment textarea{
+	min-height:100px;		
+}
+/* End of comments */
