@@ -67,6 +67,23 @@ es:
         odd: "debe ser impar"
         even: "debe ser par"
   
+  controllers: 
+    application:
+      not_authorized: Acceso denegado
+    sessions:
+      password_incorrect: Password incorrecto
+      successfully_logged_in: ¡Estás dentro!
+      successfully_logout: ¡Has salido!
+  layouts:
+    application:
+      homepage: Portada
+      projects: Proyectos
+      contact: Contacto
+      new_post: Nuevo post
+      search_post: Buscar post
+      search: Buscar
+      personal_project_of: Este blog es un proyecto personal de
+  
   sessions:
     new:
       login: Login
@@ -75,6 +92,7 @@ es:
   posts:
     title: Título
     body: Mensaje
+    tags: Tags
     new:
       create: Publicar
       new_post: Nuevo post
@@ -86,9 +104,12 @@ es:
       site_url: Web personal
       body: Comentario
       send: Enviar
+      extra_field: Campo extra
     create:
       complete_form: Debes introducir un comentario
     comment:
       anonymous: Anónimo
       delete: Borrar
       are_you_sure: "¿Estás seguro que quieres borrar este comentario?"  
+      
+  

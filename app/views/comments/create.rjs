@@ -1,9 +1,9 @@
 unless @comment.new_record?
+  page.visual_effect :Fade, :send_new_comment
+  page.visual_effect :Fade, :new_comment
   page.insert_html :bottom, "newest_comment", :partial => 'comments/comment',
    :locals => {:comment => @comment}
   page <<  "$$('.comment').last().highlight()"
-  page.visual_effect :Fade, :send_new_comment
-  page.visual_effect :BlindUp, :new_comment
 else
    page.replace :form_errors, 
   "<div id='form_errors'>" +

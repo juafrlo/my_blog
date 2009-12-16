@@ -5,6 +5,10 @@
     <%= f.text_field :title %>
   </p>
   <p>
+    <%= f.label :tags, t('posts.tags') %><br />
+    <%= f.text_field :tag_list %>
+  </p>
+  <p>
     <%= f.label :body, t('posts.body') %><br />
     <%= f.text_area :body %>
   </p>

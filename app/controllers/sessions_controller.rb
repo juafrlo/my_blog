@@ -15,6 +15,7 @@ class SessionsController < ApplicationController
   
   def destroy
     reset_session
+    flash[:notice] = t("controllers.sessions.successfully_logout")
     redirect_to home_url
   end
 end

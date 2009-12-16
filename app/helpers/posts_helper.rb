@@ -10,4 +10,13 @@ module PostsHelper
       html +=  "<span class='dateblock_year'>#{l(date, :format => 'year')}</span>"
     html += "</div>"
   end    
+
+  def post_tags(post)
+    html = ""
+    post.tags.each do |tag|
+      html += link_to tag
+      html += ", " unless tag == post.tags.last
+    end
+    html
+  end
 end

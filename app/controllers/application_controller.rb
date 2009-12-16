@@ -4,6 +4,7 @@
 class ApplicationController < ActionController::Base
   helper :all # include all helpers, all the time
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
+  helper_method :admin?
 
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
@@ -16,5 +17,12 @@ class ApplicationController < ActionController::Base
   def admin?
     session[:admin] ? true : false
   end    
+  
+  def admin_required
+    if session[:admin].blank?
+      flash[:error] = t("controllers.application.not_authorized")
+      redirect_to home_url
+    end
+  end
   
 end

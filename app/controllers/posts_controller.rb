@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_filter :admin_required, :except => [:index, :show]
   # GET /posts
   # GET /posts.xml
   def index
@@ -82,5 +83,14 @@ class PostsController < ApplicationController
       format.html { redirect_to(posts_url) }
       format.xml  { head :ok }
     end
+  end
+  
+  def search
+    @posts = unless params[:tag].blank?
+      Post.find_tagged_with(params[:tag])
+    else
+      Post.find_by_regexp_title(params[:title])
+    end
+    render :action => 'index'
   end
 end

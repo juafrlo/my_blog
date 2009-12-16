@@ -10,65 +10,49 @@
   <%= stylesheet_link_tag 'application' %>
   <%= javascript_include_tag :defaults %>
   <%= javascript_include_tag "textarea" %>
-
- </head>
+</head>
 
 <body>
 	<ul id="tabnav">
-		<li class="tab1">
-			<%= link_to 'Portada', '/', :class => controller_name == 'posts' ? 'selected' : ''%>
-    </li>
-		<li class="tab2"><a href="index2.html">Portofolio</a></li>
-		<li class="tab3"><a href="index3.html">Contacto</a></li>
+		<li><%= link_to t(".homepage"), home_path, tab_class("posts") %></li>
+		<li><%= link_to t(".projects"), '#', tab_class("#") %></li>
+		<li><%= link_to t(".contact"), '#', tab_class("#") %></li>
+		<% content_tag :li do %>
+			<%= link_to t(".new_post"), new_post_path, tab_class("new_post") %>
+		<% end if admin? %>
 	</ul>
 	
 	<div id="wrapper">
     <div id="header">
-	  	<div id="logo">
-	      <h1><%= link_to SITE_NAME, '/' %></h1>
-		  </div>
-		  <div id="menu">
-		    <ul>
-		    </ul>
-	    </div>
-	  </div>	<!-- end #header -->
+	  	<div id="logo"><h1><%= link_to SITE_NAME, home_path %></h1></div>
+	  </div>
 
     <div id="page">
+	    <%= flash_message %>
 		  <div id="content">
-			  <div class="post">	
-				  <div class="flash_message">
-					  <%#= my_flash_message(flash) %>
-		      </div>	   
-				  <div class="clear"></div>
-				  <%= yield  %>
-			  </div>
-		  </div> <!-- end #content -->
+			  <div id="post"><%= yield  %></div>
+		  </div> 
 	    <div id="sidebar">
-				  <div id="sidebar-bgtop"></div>
-				  <div id="sidebar-content">
-					  <div id="sidebar-bgbtm">
-					    <ul>
-					      <li id="search">
-						      <h3><%= t(:Search_title)%></h3>
-									<% @post = Post.new %>
-							    <% form_for @post, 
-							    :url => { :controller => "posts", :action => "index" }   do |f| %>
-								    <fieldset>
-								    </fieldset>
-           				<% end %>
-					      </li>
-          		</ul>
-        		</div>
-				  </div>
-  		</div> 	<!-- end #sidebar -->
+		    <div id="search">
+				  <h3><%= t('.search_post')%></h3>
+				  <% form_tag search_posts_path, :method => :get do |f|%>
+				    <%= text_field_tag :title %>
+				 	 <%= submit_tag t('.search') %>
+				  <% end %>
+			  </div>
+        <div id="cloud">
+				  <% tag_cloud Post.tag_counts, %w(css1 css2 css3 css4) do |tag, css_class| %>
+				    <%= link_to tag.name, search_posts_path(:tag => tag.name), :class => css_class %>
+  			  <% end %>
+        </div>
+		  </div>
 		<div class="clear"></div>
 	  </div>	<!-- end #page -->	
   </div>
 
   <div id="footer">
     <p>
-      Este blog es un proyecto personal de
-	    <%= link_to 'Juan de Frías', home_path %>
+      <%= t('.personal_project_of') %> <%= link_to('Juan de Frías') %>
 	  </p>
   </div>
   

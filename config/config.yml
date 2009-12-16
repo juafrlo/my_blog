@@ -1,0 +1,7 @@
+development:
+  user: admin
+  password: admin
+
+production:
+  user: admin
+  password: ******
