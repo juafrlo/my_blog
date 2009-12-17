@@ -1,0 +1,9 @@
+if @contact.errors.blank?
+  page.visual_effect :fade, :new_contact
+  page.insert_html :bottom, :post, 
+    "<p id='success' class='message ok' style='display:none'>#{t('.Sent_contact_form')}</p>"
+  page.visual_effect :appear, :success
+else
+  page.replace_html :form_errors, 
+    error_messages_for('contact', :header_message => '').to_s 
+end

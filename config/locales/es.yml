@@ -35,6 +35,9 @@ es:
         name: "Nombre"
         email: "Email"
         body: "Comentario"
+      contact:
+        name: "Nombre"
+        body: "Mensaje"
       
     errors:
       template:
@@ -70,6 +73,10 @@ es:
   controllers: 
     application:
       not_authorized: Acceso denegado
+    posts:
+      post_created: Post creado
+      post_deleted: Post borrado
+      post_updated: Post actualizado
     sessions:
       password_incorrect: Password incorrecto
       successfully_logged_in: ¡Estás dentro!
@@ -93,9 +100,26 @@ es:
     title: Título
     body: Mensaje
     tags: Tags
+    post:
+      delete_post: Borrar post
+      are_you_sure: ¿Estás seguro que quieres borrar este post y todos sus comentarios?
     new:
       create: Publicar
       new_post: Nuevo post
+    edit:
+      edit_post: Editar post
+      update: Actualizar
+  contacts:
+    index:
+      contact_intro: Mi nombre es Juan de Frías. Soy un Ingeniero Superior de Telecomunicaciones especializado en Telemática con experiencia contrastada en el mundo del desarrollo web.
+      why_this_project: Este blog no es más que un proyecto personal, desarrollado integramente en Ruby on Rails, con la intención de compartir con la comunidad todo lo relacionado con el mundo de la programación en general y del desarrollo web ágil con Ruby on Rails en particular.
+      how_to_contact: Ante cualquier duda o consulta puedes contactar conmigo a través del siguiente formulario
+      name: Nombre
+      site_url: Web personal
+      body: Mensaje
+      send: Enviar
+    create:
+      Sent_contact_form: "¡Enviado!<br/>Pronto recibirás una respuesta"
   comments:
     commenting_system:
       Comments: Comentarios
@@ -111,5 +135,3 @@ es:
       anonymous: Anónimo
       delete: Borrar
       are_you_sure: "¿Estás seguro que quieres borrar este comentario?"  
-      
-  

@@ -16,7 +16,7 @@
 	<ul id="tabnav">
 		<li><%= link_to t(".homepage"), home_path, tab_class("posts") %></li>
 		<li><%= link_to t(".projects"), '#', tab_class("#") %></li>
-		<li><%= link_to t(".contact"), '#', tab_class("#") %></li>
+		<li><%= link_to t(".contact"), contacts_path, tab_class("contacts") %></li>
 		<% content_tag :li do %>
 			<%= link_to t(".new_post"), new_post_path, tab_class("new_post") %>
 		<% end if admin? %>

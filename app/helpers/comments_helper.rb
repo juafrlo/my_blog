@@ -27,9 +27,11 @@ module CommentsHelper
    end
    
    def delete_comment(comment)
-     link_to_remote t('.delete'), 
-       :update => '',
-       :url => comment_path(comment.id) , :method => :delete,
-       :confirm => t('.are_you_sure')
+     content_tag :span, :class => 'destroy_link' do
+       link_to_remote t('.delete'), 
+         :update => '',
+         :url => comment_path(comment.id) , :method => :delete,
+         :confirm => t('.are_you_sure')
+     end if admin?
    end
 end

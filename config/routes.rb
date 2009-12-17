@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :contacts, :only => [:index, :create], :as => 'contacto'
+
   map.resources :comments, :only => [:create, :destroy]
 
   map.resources :posts, :collection => {:search => :get}

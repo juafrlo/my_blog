@@ -1,0 +1,39 @@
+<p><%= t('.contact_intro') %></p>
+<p><%= t('.why_this_project') %></p>
+<p><%= t('.how_to_contact') %>:</p>
+
+<% form_remote_for @contact, :url => :contacts do |f| %>
+   <p id="form_errors"></p>
+   <p>
+     <%= f.label :name, t('.name') %><br/>
+     <%= f.text_field :name %>
+   </p>
+
+   <p>
+     <%= f.label :email %><br/>
+     <%= f.text_field :email %>
+   </p>
+
+   <p>
+     <%= f.label :site_url, t('.site_url') %><br/>
+     <%= f.text_field :site_url %>
+   </p>
+
+   <p class="extra_field">
+     <%= f.label :extra_field %><br/>
+     <%= f.text_field :extra_field %>
+   </p>
+
+   <p>
+     <%= f.label :body, t('.body') %><br/>
+     <%= f.text_area :body, :size => "70x10" %>
+   </p>
+
+   <%= f.submit t('.send'), :class => 'submit' %>
+
+ <% end %>
+
+ <p id="success_form" class="message-ok" style="display:none;">
+ 	 <%= t('.Sent_contact_form') %><br/>
+   <%= t('.A_response_will_arrive_soon') %> 
+ </p>

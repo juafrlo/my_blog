@@ -6,7 +6,7 @@
 <h3 id="send_new_comment"><%= t('.New_comment') %></h3>
 
 <% form_remote_for @comment do |f| %>
-   <div id="form_errors"></div>
+   <div id="form_errors">a</div>
 
   <%= f.hidden_field :post_id, :value => @post.id %>
   <p>
@@ -24,7 +24,7 @@
 	  <%= f.text_field :site_url %>
 	</p>
 	
-	<p class="extra_field"
+	<p class="extra_field">
 	  <span><%= f.label :extra_field, t('.extra_field') %></span>
 	  <%= f.text_field :extra_field %>
   </p>

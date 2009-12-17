@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_filter :admin_required, :except => [:index, :show]
+  before_filter :admin_required, :except => [:index, :show, :search]
   # GET /posts
   # GET /posts.xml
   def index
@@ -46,7 +46,7 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       if @post.save
-        flash[:notice] = 'Post was successfully created.'
+        flash[:notice] = t("controllers.posts.post_created")
         format.html { redirect_to(@post) }
         format.xml  { render :xml => @post, :status => :created, :location => @post }
       else
@@ -63,7 +63,7 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       if @post.update_attributes(params[:post])
-        flash[:notice] = 'Post was successfully updated.'
+        flash[:notice] = t("controllers.posts.post_updated")
         format.html { redirect_to(@post) }
         format.xml  { head :ok }
       else

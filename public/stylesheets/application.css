@@ -90,7 +90,7 @@ a img {
 /* Content */
 #content {
 	float: left;
-	width: 600px;
+	width: 556px;
 }
 
 #post {
@@ -108,6 +108,10 @@ a img {
 #post .tag_list{
 	font-size: 14px;
 	padding-top: 20px;
+}
+
+#post .destroy_link a{
+	color: red;
 }
 
 /* Login */
@@ -183,12 +187,12 @@ textarea{
 	border:1px solid #990000;
 	margin: 5px 0px 8px 0px;
 	color:#BB0000;
-	float:left;
 	width: 492px;
 }
 
 .errorExplanation p{
-   height: 0px;
+  height: 0px;
+  margin: 0px;
 }
 
 .errorExplanation ul {
@@ -353,7 +357,7 @@ ul#tabnav a:hover { /* settings for hover effect */
 	min-height: 100px;		
 }
 
-.new_comment p.extra_field{
+p.extra_field{
 	display: none;
 }
 /* End of comments */
@@ -378,4 +382,3 @@ ul#tabnav a:hover { /* settings for hover effect */
 	border:1px solid  #00BB00;
 	color:#008800;
 }
-

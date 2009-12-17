@@ -3,10 +3,13 @@ module ApplicationHelper
   include TagsHelper
 
   def tab_class(section)
+
     case section
       when "posts"
-        {:class => 'selected'} if controller_name == section 
+        {:class => 'selected'} if controller_name == section && action_name != 'new'
       when "new_post"
+        {:class => 'selected'} if controller_name == "posts" && action_name == 'new'
+      when "contacts"
         {:class => 'selected'} if controller_name == section && action_name == 'new'
     end
   end

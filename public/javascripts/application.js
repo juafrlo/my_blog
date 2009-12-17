@@ -23,6 +23,9 @@ document.observe("dom:loaded",function(){
   	resizeIt(); //initial on load
   	$('comment_extra_field').parentNode.hide();  
   }
+	if ($$('.new_contact').length){
+  	$('contact_extra_field').parentNode.hide();  
+  }
 })
 
 

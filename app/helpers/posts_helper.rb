@@ -19,4 +19,10 @@ module PostsHelper
     end
     html
   end
+  
+  def delete_post(post)
+  	content_tag :div, :class => 'destroy_link' do 
+  		link_to t('.delete_post'), post, :method => :delete, :confirm => t('.are_you_sure')
+    end if admin? 
+  end
 end
