@@ -129,9 +129,17 @@ es:
       body: Comentario
       send: Enviar
       extra_field: Campo extra
+      email: Email (no se mostrará)
     create:
       complete_form: Debes introducir un comentario
     comment:
       anonymous: Anónimo
       delete: Borrar
       are_you_sure: "¿Estás seguro que quieres borrar este comentario?"  
+    email:
+      comment_notification_subject: Alguien ha comentado un post
+      notification_body: Alguien ha comentado un post en tu blog. Puedes consultarlo en el siguiente enlace
+      view_post: Ver post
+  paginator:
+    previous: "<<"
+    next:  >>

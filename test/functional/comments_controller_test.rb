@@ -1,45 +1,55 @@
 require 'test_helper'
 
 class CommentsControllerTest < ActionController::TestCase
-  test "should get index" do
-    get :index
-    assert_response :success
-    assert_not_nil assigns(:comments)
-  end
-
-  test "should get new" do
-    get :new
-    assert_response :success
-  end
-
-  test "should create comment" do
-    assert_difference('Comment.count') do
+  test "should not create comment without validation" do
+    assert_no_difference('Comment.count') do
       post :create, :comment => { }
     end
-
-    assert_redirected_to comment_path(assigns(:comment))
-  end
-
-  test "should show comment" do
-    get :show, :id => comments(:one).to_param
     assert_response :success
   end
 
-  test "should get edit" do
-    get :edit, :id => comments(:one).to_param
-    assert_response :success
-  end
-
-  test "should update comment" do
-    put :update, :id => comments(:one).to_param, :comment => { }
-    assert_redirected_to comment_path(assigns(:comment))
-  end
-
-  test "should destroy comment" do
-    assert_difference('Comment.count', -1) do
-      delete :destroy, :id => comments(:one).to_param
+  test "should create comment and send email" do
+    assert_difference 'ActionMailer::Base.deliveries.size', +1 do
+      assert_difference('Comment.count') do
+        post :create, :comment => comment_params
+      end
     end
-
-    assert_redirected_to comments_path
+    assert_response :success
   end
+  
+  test "should not allow spam" do
+    spam_params = comment_params
+    spam_params.delete(:extra_field)
+    assert_no_difference('Comment.count') do
+      post :create, :comment => spam_params
+    end
+    assert_response :success
+  end  
+  
+  test "admin should destroy comment" do
+    assert_difference('Comment.count', -1) do
+      delete :destroy, {:id => comments(:one).to_param}, {:admin => true}
+    end
+    assert_response :success
+  end
+
+  test "user should not  destroy comment" do
+    assert_no_difference('Comment.count', -1) do
+      delete :destroy, {:id => comments(:one).to_param}
+    end
+    assert_response :redirect
+  end
+
+end
+
+
+private
+def comment_params
+  {
+    :post_id => 1,
+    :body => 'Text',
+    :name => 'Test',
+    :email => 'test@test.com',
+    :extra_field => ''
+  }
 end

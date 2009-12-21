@@ -15,7 +15,6 @@
 <body>
 	<ul id="tabnav">
 		<li><%= link_to t(".homepage"), home_path, tab_class("posts") %></li>
-		<li><%= link_to t(".projects"), '#', tab_class("#") %></li>
 		<li><%= link_to t(".contact"), contacts_path, tab_class("contacts") %></li>
 		<% content_tag :li do %>
 			<%= link_to t(".new_post"), new_post_path, tab_class("new_post") %>
@@ -35,7 +34,7 @@
 	    <div id="sidebar">
 		    <div id="search">
 				  <h3><%= t('.search_post')%></h3>
-				  <% form_tag search_posts_path, :method => :get do |f|%>
+				  <% form_tag search_posts_path, :method => :get do %>
 				    <%= text_field_tag :title %>
 				 	 <%= submit_tag t('.search') %>
 				  <% end %>
@@ -45,6 +44,13 @@
 				    <%= link_to tag.name, search_posts_path(:tag => tag.name), :class => css_class %>
   			  <% end %>
         </div>
+        <div>
+	         <ul id="projects">
+		           <li><%= link_to 'Antes de cocinar.com' %></li>
+		           <li><%= link_to 'Blog' %></li>
+		           <li><%= link_to 'Github' %></li>
+		       </ul>
+	      </div>
 		  </div>
 		<div class="clear"></div>
 	  </div>	<!-- end #page -->	

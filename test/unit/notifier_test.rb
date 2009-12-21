@@ -5,4 +5,17 @@ class NotifierTest < ActionMailer::TestCase
   test "the truth" do
     assert true
   end
+
+  test "should deliver comment notification" do
+    assert_difference 'ActionMailer::Base.deliveries.size', +1 do
+      Comment.create(
+        :post_id => 1,
+        :body => 'Text',
+        :name => 'Test',
+        :email => 'test@test.com',
+        :extra_field => ''
+      )
+    end
+    assert_response :success
+  end
 end

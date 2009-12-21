@@ -1,11 +1,11 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
+  id: 1
   title: MyString
-  intro: MyText
   body: MyText
 
 two:
+  id: 2
   title: MyString
-  intro: MyText
   body: MyText

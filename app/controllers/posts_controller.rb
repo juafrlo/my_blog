@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.xml
   def index
-    @posts = Post.all(:order => 'created_at DESC')
+    @posts = Post.ordered.paginate :per_page => 5, :page => params[:page]                                     
 
     respond_to do |format|
       format.html # index.html.erb
@@ -87,9 +87,11 @@ class PostsController < ApplicationController
   
   def search
     @posts = unless params[:tag].blank?
-      Post.find_tagged_with(params[:tag])
+      Post.ordered.find_tagged_with(params[:tag]).paginate :per_page => 5,
+       :page => params[:page]
     else
-      Post.find_by_regexp_title(params[:title])
+      Post.ordered.find_by_regexp_title(params[:title]).paginate :per_page => 5,
+       :page => params[:page]
     end
     render :action => 'index'
   end

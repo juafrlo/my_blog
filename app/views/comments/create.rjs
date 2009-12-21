@@ -1,4 +1,6 @@
+page.visual_effect :Fade, :spinner
 unless @comment.new_record?
+  page.visual_effect :Fade, :spinner
   page.visual_effect :Fade, :send_new_comment
   page.visual_effect :Fade, :new_comment
   page.insert_html :bottom, "newest_comment", :partial => 'comments/comment',

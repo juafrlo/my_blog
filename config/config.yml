@@ -1,7 +1,18 @@
 development:
   user: admin
   password: admin
+  email: test@test.com
+  site_url: localhost:3000
+
+test:
+  user: admin
+  password: admin
+  email: test@test.com
+  site_url: localhost:3000
+
 
 production:
-  user: admin
+  user: ******
   password: ******
+  email: ******
+  site_url: www.juandefrias.com

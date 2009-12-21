@@ -1,10 +1,6 @@
 class ContactsController < ApplicationController
   def index
-    if params[:contact].blank?
-      @contact = Contact.new
-    else
-      @contact = Contact.new(params[:contact])
-    end
+    @contact = Contact.new
   end
   
   def create

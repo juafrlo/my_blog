@@ -5,8 +5,8 @@
 
 <h3 id="send_new_comment"><%= t('.New_comment') %></h3>
 
-<% form_remote_for @comment do |f| %>
-   <div id="form_errors">a</div>
+<% form_remote_for @comment, :loading => "$('spinner').appear();" do |f| %>
+   <div id="form_errors"></div>
 
   <%= f.hidden_field :post_id, :value => @post.id %>
   <p>
@@ -15,7 +15,7 @@
   </p>
 
   <p>
-	  <span><%= f.label :email %></span>
+	  <span><%= f.label :email, t('.email') %></span>
 	  <%= f.text_field :email %>
 	</p>
 
@@ -36,5 +36,6 @@
 	
 	<p>
 		<%= f.submit t('.send'), :class => 'submit' %>
+		<%= image_tag 'spinner.gif', :id => 'spinner', :style => 'display:none;' %>
 	<p>
 <% end %>

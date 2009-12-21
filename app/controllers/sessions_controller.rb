@@ -1,7 +1,4 @@
 class SessionsController < ApplicationController
-  def new
-  end
-
   def create
     if params[:password] == APP_CONFIG['password']
       flash[:notice] = t("controllers.sessions.successfully_logged_in")
