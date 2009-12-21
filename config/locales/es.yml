@@ -90,7 +90,10 @@ es:
       search_post: Buscar post
       search: Buscar
       personal_project_of: Este blog es un proyecto personal de
-  
+      subscribe: Subscríbete
+      rss: RSS
+      cloud: Tags
+      some_projects: Algunos proyectos 
   sessions:
     new:
       login: Login
@@ -109,6 +112,8 @@ es:
     edit:
       edit_post: Editar post
       update: Actualizar
+    index:
+      news: Últimos posts
   contacts:
     index:
       contact_intro: Mi nombre es Juan de Frías. Soy un Ingeniero Superior de Telecomunicaciones especializado en Telemática con experiencia contrastada en el mundo del desarrollo web.

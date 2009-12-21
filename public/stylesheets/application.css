@@ -126,6 +126,12 @@ a img {
 	display: block;
 }
 
+#sidebar h3{
+	font-size: 20px;
+	background: #CCC;
+	padding: 3px;
+}
+
 #sidebar #search input {
 	width: auto;
 }
@@ -134,8 +140,38 @@ a img {
 	width: 235px;
 }
 
+#sidebar #rss{
+	display: block;
+	margin-top: 32px;
+}
+
+#sidebar #rss a{
+	font-size: 18px;
+	text-decoration: none;
+}
+
+#sidebar #rss a img{
+	float:left;
+	margin: 3px 10px 0px 0px;
+}
+
+#sidebar #projects{
+	margin-top: 32px;
+}
+
+#sidebar #projects ul {
+	list-style: none;
+	padding: 0px;
+	font-size: 14px;
+}
+
+#sidebar #projects ul a{
+	text-decoration: none;
+	color: green;
+}
+
 #sidebar #cloud{
-	margin-top: 40px;
+	margin-top: 32px;
 }
 
 #sidebar #cloud a {
@@ -390,19 +426,6 @@ p.extra_field{
 	background: #CCFFCC;
 	border:1px solid  #00BB00;
 	color:#008800;
-}
-
-/* Projects */
-ul#projects{
-	list-style: none;
-	padding: 0px;
-	line-height:40px;
-	font-size: 14px;
-}
-
-ul#projects a{
-	text-decoration: none;
-	color: green;
 }
 
 /* Paginator */
