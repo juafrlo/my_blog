@@ -106,6 +106,13 @@ es:
     post:
       delete_post: Borrar post
       are_you_sure: ¿Estás seguro que quieres borrar este post y todos sus comentarios?
+      view_more: Ver más
+      comment: Comenta
+      no_comments: 0 comentarios
+      comments_count:
+        one:  "1 comentario" 
+        other: "{{count}} comentarios"
+
     new:
       create: Publicar
       new_post: Nuevo post

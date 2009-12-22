@@ -6,7 +6,7 @@ xml.rss "version" => "2.0", "xmlns:dc" => "http//purl.org/dc/elements/1.1" do
       xml.item do |item| 
         xml.title post.title
         xml.link post_url(post)
-        xml.description truncate(post.body,30)
+        xml.description truncate(post.body,:length => 500)
         xml.pubdate post.created_at
       end
     end

@@ -2,8 +2,11 @@
 module ApplicationHelper
   include TagsHelper
 
-  def tab_class(section)
+  def textilize(text)
+    Textilizer.new(text).to_html unless text.blank?
+  end
 
+  def tab_class(section)
     case section
       when "posts"
         {:class => 'selected'} if controller_name == section && action_name != 'new'

@@ -3,7 +3,7 @@
 
 <div id="newest_comment"></div>
 
-<h3 id="send_new_comment"><%= t('.New_comment') %></h3>
+<a name="comments"><h3 id="send_new_comment"><%= t('.New_comment') %></h3></a>
 
 <% form_remote_for @comment, :loading => "$('spinner').appear();" do |f| %>
    <div id="form_errors"></div>
