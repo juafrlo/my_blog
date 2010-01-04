@@ -13,7 +13,7 @@ module CommentsHelper
      if comment.email.blank? 
        image_tag('avatar.png') 
      else
-       image_tag gravatar_url_for(comment.email, { :s => 40 })
+       image = image_tag gravatar_url_for(comment.email, { :s => 40 })
      end
    end
    

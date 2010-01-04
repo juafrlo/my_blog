@@ -5,6 +5,7 @@ unless @comment.new_record?
   page.visual_effect :Fade, :new_comment
   page.insert_html :bottom, "newest_comment", :partial => 'comments/comment',
    :locals => {:comment => @comment}
+  page.visual_effect :Fade, :no_comments if @comment.post.comments.size == 1
   page <<  "$$('.comment').last().highlight()"
 else
    page.replace :form_errors, 

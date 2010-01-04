@@ -18,6 +18,11 @@ h1 {
 	font-size: 2.4em;
 }
 
+h2 {
+	font-size: 20px;
+	padding-top: 16px;
+}
+
 a {
 	color: #6630e0;
 }
@@ -36,6 +41,7 @@ a img {
 	margin: 0 auto;
 	border: 10px solid #FFFFFF;
 }
+
 
 /* Header */
 #header {
@@ -114,22 +120,22 @@ a img {
 	color: red;
 }
 
-#message{
-	padding:0px;
-	margin:0px;
+.post_message{
+	padding-bottom:0px;
+	margin-bottom:0px;
 }
 
-#how_to_put_code{
+.how_to_put_code{
 	padding-left: 20px;
 	cursor: pointer;
 }
 
-#how_to_put_code_explanation{
+.how_to_put_code_explanation{
 	padding:0px;
 	margin:0px;
 }
 
-#how_to_put_code_explanation #code_intro{
+.how_to_put_code_explanation .code_intro{
 	padding-left: 10px;
 }
 
@@ -183,6 +189,7 @@ a img {
 	list-style: none;
 	padding: 0px;
 	font-size: 14px;
+	margin: 0px;
 }
 
 #sidebar #projects ul a{
@@ -439,8 +446,21 @@ ul#tabnav a:hover { /* settings for hover effect */
 	float: left;
 }
 
+#new_comment input, #new_comment textarea{
+	width: 480px;
+}
+
+
 p.extra_field{
 	display: none;
+}
+
+#no_comments{
+	padding-left: 65px;
+}
+
+#comment_submit{
+	width: auto !important; 
 }
 /* End of comments */
 

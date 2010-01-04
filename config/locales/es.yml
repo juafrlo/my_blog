@@ -101,6 +101,7 @@ es:
       log_in: Entrar
   posts:
     title: Título
+    intro: Intro
     body: Mensaje
     tags: Tags
     post:
@@ -145,6 +146,7 @@ es:
       send: Enviar
       extra_field: Campo extra
       email: Email (no se mostrará)
+      no_comments: No hay comentarios todavía para este post
     create:
       complete_form: Debes introducir un comentario
     comment:
