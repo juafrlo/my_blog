@@ -3,7 +3,8 @@
 	<h2><%= post_title post %></h2>
 	<div class="post_body"><%= textilize post.body %></div>
   <div class="tag_list"> Tags: <%= post_tags post %></div>
-  <%= delete_post post%>
+  <%= delete_post post %>
+  <%= edit_post post %>
   <% if action_name == 'index' %>
   	<%= link_to t('.view_more'), post_path(post) %> |
 	  <%= link_to t('.comment'), post_path(post, :anchor => 'comments') %> 

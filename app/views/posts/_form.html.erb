@@ -8,8 +8,16 @@
     <%= f.label :tags, t('posts.tags') %><br />
     <%= f.text_field :tag_list %>
   </p>
-  <p>
-    <%= f.label :body, t('posts.body') %><br />
+  <p id="message">
+    <%= f.label :body, t('posts.body') %> 
+		<span id="how_to_put_code">
+	    <a onclick="$('how_to_put_code_explanation').appear(); this.fade();">
+				<%= t('.how_to_put_code') %>
+			</a>
+		</span>
+    <p id="how_to_put_code_explanation" style="display:none;">
+			<%= t('.how_to_put_code_explanation') %>
+		</p>
     <%= f.text_area :body %>
   </p>
   <p>

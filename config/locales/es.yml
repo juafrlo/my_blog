@@ -105,6 +105,7 @@ es:
     tags: Tags
     post:
       delete_post: Borrar post
+      edit_post: Editar post
       are_you_sure: ¿Estás seguro que quieres borrar este post y todos sus comentarios?
       view_more: Ver más
       comment: Comenta
@@ -112,7 +113,6 @@ es:
       comments_count:
         one:  "1 comentario" 
         other: "{{count}} comentarios"
-
     new:
       create: Publicar
       new_post: Nuevo post
@@ -121,6 +121,9 @@ es:
       update: Actualizar
     index:
       news: Últimos posts
+    form: 
+      how_to_put_code: ¿Cómo puedo poner código?
+      how_to_put_code_explanation: "Para poder poner código, dicho código debe estar rodeado por los tags:<br/> @@@ruby<br/> <span id='code_intro'>code</span><br/>@@@"
   contacts:
     index:
       contact_intro: Mi nombre es Juan de Frías. Soy un Ingeniero Superior de Telecomunicaciones especializado en Telemática con experiencia contrastada en el mundo del desarrollo web.

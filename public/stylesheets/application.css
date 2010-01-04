@@ -114,6 +114,25 @@ a img {
 	color: red;
 }
 
+#message{
+	padding:0px;
+	margin:0px;
+}
+
+#how_to_put_code{
+	padding-left: 20px;
+	cursor: pointer;
+}
+
+#how_to_put_code_explanation{
+	padding:0px;
+	margin:0px;
+}
+
+#how_to_put_code_explanation #code_intro{
+	padding-left: 10px;
+}
+
 /* Login */
 #login input{
 	width: auto;
