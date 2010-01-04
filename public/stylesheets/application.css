@@ -202,6 +202,19 @@ a img {
 	text-decoration: none;
 }
 
+/* Contact */
+#new_contact input {
+	width: 548px;
+}
+
+#new_contact textarea{
+	width: 548px;
+}
+
+#new_contact #contact_submit{
+	width: auto;
+}
+
 /* Footer */
 #footer {
 	clear: both;
