@@ -149,6 +149,7 @@ a img {
 	font-size: 20px;
 	background: #CCC;
 	padding: 3px;
+	margin-bottom: 10px;
 }
 
 #sidebar #search input {
@@ -191,6 +192,10 @@ a img {
 
 #sidebar #cloud{
 	margin-top: 32px;
+}
+
+#sidebar #cloud #cloud_block{
+	width: 294px;
 }
 
 #sidebar #cloud a {
