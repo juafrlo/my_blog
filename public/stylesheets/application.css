@@ -167,7 +167,7 @@ p.active input{
 }
 
 #sidebar #search input#title{
-	width: 235px;
+	width: 222px;
 }
 
 #sidebar #rss{
@@ -398,6 +398,7 @@ ul#tabnav a:hover { /* settings for hover effect */
 /* Comments */
 .comment{
 	display:block;
+	margin-bottom: 18px;
 }
 
 .comment .avatar{
@@ -423,7 +424,7 @@ ul#tabnav a:hover { /* settings for hover effect */
 }
 
 #send_new_comment {
-  padding-top: 40px;
+  padding-top: 15px;
   display: block;
   clear: left;
 }

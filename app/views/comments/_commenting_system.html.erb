@@ -1,6 +1,9 @@
 <h3><%= t('.Comments') %></h3>
-<%= render @post.comments %>
-<span id="no_comments"><%= t('.no_comments') %></span>
+<% if @post.comments.blank? %> 
+  <span id="no_comments"><%= t('.no_comments') %></span>
+<% else %>
+  <%= render @post.comments %>
+<% end %>
 <div id="newest_comment"></div>
 
 <a name="comments"><h3 id="send_new_comment"><%= t('.New_comment') %></h3></a>
