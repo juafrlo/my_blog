@@ -34,6 +34,13 @@
 		</p>
     <%= f.text_area :body %>
   </p>
+  <div style="clear:both;"></div>
+
+  <p class="active">
+	  <%= f.check_box :active %>
+	  <%= f.label :active, t('.active') %>
+	</p>
+
   <p>
     <%= f.submit text, :class => 'submit' %>
   </p>

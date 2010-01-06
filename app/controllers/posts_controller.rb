@@ -1,9 +1,10 @@
 class PostsController < ApplicationController
   before_filter :admin_required, :except => [:index, :show, :search]
+  before_filter :only_active, :only =>[:show]
   # GET /posts
   # GET /posts.xml
   def index
-    @posts = Post.ordered.paginate :per_page => 5, :page => params[:page]                                     
+    @posts = Post.active.ordered.paginate :per_page => 5, :page => params[:page]                                     
 
     respond_to do |format|
       format.html # index.html.erb
@@ -15,7 +16,6 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.xml
   def show
-    @post = Post.find(params[:id])
     @comment = Comment.new
 
     respond_to do |format|
@@ -95,5 +95,11 @@ class PostsController < ApplicationController
        :page => params[:page]
     end
     render :action => 'index'
+  end
+  
+  protected
+  def only_active
+    @post = Post.find(params[:id])
+    redirect_to home_url if !@post.active && session[:admin].blank?
   end
 end

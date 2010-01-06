@@ -117,7 +117,7 @@ a img {
 }
 
 #post .destroy_link a{
-	color: red;
+	color: #FF0000;
 }
 
 .post_message{
@@ -137,6 +137,10 @@ a img {
 
 .how_to_put_code_explanation .code_intro{
 	padding-left: 10px;
+}
+
+p.active input{
+	width: 8px;
 }
 
 /* Login */

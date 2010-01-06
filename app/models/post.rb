@@ -3,6 +3,7 @@ class Post < ActiveRecord::Base
   has_many :comments, :dependent => :destroy
   
   named_scope :ordered, :order => "created_at DESC"
+  named_scope :active, :conditions => {:active => true}
   
   def to_param
     id.to_s << "-" << (title ? title.parameterize : '' )

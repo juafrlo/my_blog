@@ -10,6 +10,7 @@
 	  <%= link_to t('.comment'), post_path(post, :anchor => 'comments') %> 
 	<% end %>
   <div class="tag_list"> Tags: <%= post_tags post %></div>
-  <%= delete_post post %>
-  <%= edit_post post %>
+  <div class="destroy_link">  
+  	<%= admin_links(post) %>
+  </div>
 </div>

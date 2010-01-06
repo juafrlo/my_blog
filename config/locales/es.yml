@@ -125,6 +125,7 @@ es:
     form: 
       how_to_put_code: ¿Cómo puedo poner código?
       how_to_put_code_explanation: "Para poder poner código, dicho código debe estar rodeado por los tags:<br/> @@@ruby<br/> <span id='code_intro'>code</span><br/>@@@"
+      active: Publicar
   contacts:
     index:
       contact_intro: Mi nombre es Juan de Frías. Soy un Ingeniero Superior de Telecomunicaciones especializado en Telemática con experiencia contrastada en el mundo del desarrollo web.
