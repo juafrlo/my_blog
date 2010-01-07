@@ -58,8 +58,9 @@ a img {
 
 /* Logo */
 #logo {
-	float: left;
-	padding-left: 20px;
+	float:left;
+	text-align:right;
+	width:229px;
 }
 
 #logo h1, #logo p {
@@ -79,9 +80,9 @@ a img {
 	font-weight: bold;
 }
 
-#logo h1 span{
+#logo h1 span a{
 	font-size: 14px;
-	padding-left: 85px;
+	font-weight: normal !important;
 }
 
 /* Page */
