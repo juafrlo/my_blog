@@ -70,13 +70,18 @@ a img {
 }
 
 #logo h1 {
-	padding: 40px 0px 0px 0px;
+	padding: 27px 0px 0px 0px;
 }
 
 #logo h1 a{
   color:white;
   letter-spacing: 1px;
 	font-weight: bold;
+}
+
+#logo h1 span{
+	font-size: 14px;
+	padding-left: 85px;
 }
 
 /* Page */
