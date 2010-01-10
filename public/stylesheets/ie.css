@@ -1,3 +1,16 @@
 #comment_body{
   height: 100px;
 }
+
+#site_name{
+	line-height:0px;
+	margin:0px !important;
+	padding:0px !imporant;	
+}
+
+#logo{
+	float:left;
+	text-align:right;
+	width:229px;
+	padding-top:19px;
+}
