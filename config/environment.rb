@@ -35,7 +35,7 @@ Rails::Initializer.run do |config|
   # Run "rake -D time" for a list of tasks for finding time zone names.
   config.time_zone = "Madrid"
   SITE_NAME = 'Juan de Frías'
-  KEYWORDS = "Juan de Frías, blog, Ruby on Rails, tecnología, desarrollo ágil"
+  KEYWORDS = "Juan de Frías, blog, Ruby on Rails, tecnología, desarrollo web ágil"
   DESCRIPTION = "Blog de Juan de Frías sobre desarrollo ágil web, con especial atención a Ruby on Rails"
 
   # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
