@@ -54,9 +54,15 @@
         <div id="projects">
 				  <h3><%= t('.some_projects')%></h3>
 	         <ul>
-		           <li><%= link_to 'www.antesdecocinar.com', "http://www.antesdecocinar.com" %></li>
-		           <li><%= link_to 'www.juandefrias.com', "http://www.juandefrias.com" %></li>
-		           <li><%= link_to 'Plugins de Rails', "http://www.github.com/juafrlo" %></li>
+		           <li><%= link_to 'www.antesdecocinar.com',
+		               "http://www.antesdecocinar.com", :target => 'blank' %>
+		           </li>
+		           <li><%= link_to 'www.juandefrias.com',
+		               "http://www.juandefrias.com", :target => 'blank' %>
+		           </li>
+		           <li><%= link_to 'Plugins de Rails',
+		               "http://www.github.com/juafrlo", :target => 'blank' %>
+		           </li>
 		       </ul>
 	      </div>
         <div id="cloud">
