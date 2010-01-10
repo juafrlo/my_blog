@@ -6,8 +6,9 @@ class ApplicationController < ActionController::Base
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
   helper_method :admin?
   
-  USERNAME, PASSWORD = "admin", "test"
-  before_filter :authenticate_with_http if RAILS_ENV == "production"
+  # Comment once is correct
+  #USERNAME, PASSWORD = "admin", "test"
+  #before_filter :authenticate_with_http if RAILS_ENV == "production"
 
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
