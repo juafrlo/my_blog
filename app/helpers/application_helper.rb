@@ -24,4 +24,12 @@ module ApplicationHelper
       "<div class='message error'>" + flash[:error] + "</div>"
     end
   end
+  
+  def page_title
+    if controller_name == "posts" && action_name == "show"
+      "#{SITE_NAME}: #{@post.title}"
+    else
+      SITE_NAME
+    end
+  end
 end
