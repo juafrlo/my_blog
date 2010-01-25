@@ -3,6 +3,7 @@ class Notifier < ActionMailer::Base
     setup_email(comment)
     @subject    += I18n.t('comments.email.comment_notification_subject')
     @url = "http://#{APP_CONFIG['site_url']}#{post_path(comment.post)}"
+    @post = comment.post
   end  
   
   protected
