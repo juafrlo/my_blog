@@ -159,6 +159,7 @@ es:
       comment_notification_subject: Alguien ha comentado un post
       notification_body: Alguien ha comentado un post en tu blog. Puedes consultarlo en el siguiente enlace
       view_post: Ver post
+      blog_of: El blog de
   paginator:
     previous: "<<"
     next:  >>

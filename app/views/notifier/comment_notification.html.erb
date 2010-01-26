@@ -1,4 +1,9 @@
 <%= t('comments.email.notification_body') %>:<br/>
 <p>
-<%= link_to "#{t('comments.email.view_post')}: #{@post.title}", @url %>
+	<%= t('comments.email.view_post') %>: <%= link_to @post.title, @url %>
+</p>
+
+<br/>
+<p>
+<%= "#{t('comments.email.blog_of')} #{APP_CONFIG['site_url']}" %>
 </p>
