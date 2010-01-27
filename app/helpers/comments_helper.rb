@@ -10,10 +10,10 @@ module CommentsHelper
    end
    
    def comment_avatar(comment)
-     if comment.email.blank? 
+     if comment.email.blank? && RAILS_ENV == "development" 
        image_tag('avatar.png') 
      else
-       image = image_tag gravatar_url_for(comment.email, { :s => 40 })
+       image = image_tag gravatar_url_for(comment.email, { :s => 50 })
      end
    end
    
