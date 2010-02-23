@@ -1,6 +1,6 @@
 == Welcome to Juan de Frías blog
 
-  This blog is about agile web development, especially focused on Ruby on Rails. 
+  This blog is about agile web development, specially focused on Ruby on Rails. 
 
 
 == ABOUT THE CREATOR
