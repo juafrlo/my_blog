@@ -47,5 +47,8 @@ Rails::Initializer.run do |config|
 end
 
 ActionMailer::Base.delivery_method = :sendmail
-require 'coderay'
-require 'RedCloth'
+require 'rubygems'
+ require 'redcloth'
+ require 'coderay'
+ require 'redclothcoderay'
+ RedclothCoderay.coderay_options :lang => :ruby, :css => :class
