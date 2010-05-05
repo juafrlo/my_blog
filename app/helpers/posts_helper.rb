@@ -14,7 +14,7 @@ module PostsHelper
   def post_tags(post)
     html = ""
     post.tags.each do |tag|
-      html += link_to tag
+      html += link_to(tag.name, search_posts_path(:tag => tag.name))
       html += ", " unless tag == post.tags.last
     end
     html

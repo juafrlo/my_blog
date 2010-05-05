@@ -87,7 +87,7 @@ class PostsController < ApplicationController
   end
   
   def search
-    @posts = unless params[:tag].blank?
+    @posts = unless params[:tag].blank?    
       Post.ordered.find_tagged_with(params[:tag]).paginate :per_page => 5,
        :page => params[:page]
     else
