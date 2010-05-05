@@ -125,7 +125,7 @@ es:
       news: Últimos posts
     form: 
       how_to_put_code: ¿Cómo puedo poner código?
-      how_to_put_code_explanation: "Para poder poner código, dicho código debe estar rodeado por los tags:<br/>< source><br/> <span id='code_intro'>code</span><br/>< /source>"
+      how_to_put_code_explanation: "Para poder poner código, dicho código debe estar rodeado por los tags:<br/>[enter]<br/>< source><br/> <span id='code_intro'>code</span><br/>< /source><br/>[enter]"
       active: Publicar
   contacts:
     index:
