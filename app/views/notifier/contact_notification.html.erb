@@ -1,15 +1,8 @@
-<%= t('contacts.email.intro') %>:<br/>
-<p>
-	<%= t('contacts.index.name') %>: <%= @contact.name %>
-</p>
-<p>
-	<%= t('contacts.index.site_url') %>: <%= @contact.site_url %>
-</p>
-<p>
-	Email: <%= @contact.email %>
-</p>
+<%= t('contacts.index.name') %>: <%= @contact.name %><br/>
+<%= t('contacts.index.site_url') %>: <%= @contact.site_url %><br/>
+Email: <%= @contact.email %>
 
-
-<%= t('contacts.email.body') %>:<br/>
-<%= @contact.body %>
-
+<p>
+	<%= t('contacts.email.body') %>:<br/>
+	<%= @contact.body %>
+</p>
