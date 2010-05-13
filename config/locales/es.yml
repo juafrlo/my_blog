@@ -136,6 +136,10 @@ es:
       site_url: Web personal
       body: Mensaje
       send: Enviar
+    email:
+      intro: Sus datos son
+      body: Mensaje
+      contact_notification_subject: Alguien se ha puesto en contacto contigo a través de tu blog
     create:
       Sent_contact_form: "¡Enviado!<br/>Pronto recibirás una respuesta"
   comments:
