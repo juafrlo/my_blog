@@ -46,9 +46,9 @@ Rails::Initializer.run do |config|
   # config.i18n.default_locale = :de
 end
 
-ActionMailer::Base.delivery_method = :sendmail
+
 require 'rubygems'
- require 'redcloth'
- require 'coderay'
- require 'redclothcoderay'
- RedclothCoderay.coderay_options :lang => :ruby, :css => :class
+require 'redcloth'
+require 'coderay'
+require 'redclothcoderay'
+RedclothCoderay.coderay_options :lang => :ruby, :css => :class
