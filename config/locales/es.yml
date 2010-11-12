@@ -83,7 +83,6 @@ es:
       successfully_logout: ¡Has salido!
   layouts:
     application:
-      subtitle: Desarrollo web ágil
       homepage: Portada
       projects: Proyectos
       contact: Contacto
@@ -95,6 +94,8 @@ es:
       rss: RSS
       cloud: Tags
       some_projects: Algunos proyectos 
+    header:
+      subtitle: Desarrollo web ágil      
   sessions:
     new:
       login: Login
@@ -136,6 +137,7 @@ es:
       site_url: Web personal
       body: Mensaje
       send: Enviar
+      contact: Contacto
     email:
       intro: Sus datos son
       body: Mensaje

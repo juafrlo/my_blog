@@ -14,4 +14,26 @@
 	width:229px;
 	padding-top:19px;
 	display:block;
+	padding: 47px 0px 0px 0px;
 }
+
+#logo h1 span {
+	line-height:47px !important;
+}
+
+.t{
+	position: absolute;
+	top:71px;
+}
+
+ul#tabnav { /* general settings */
+	text-align: right; /* set to left, right or center */
+	margin: 9px 0 20px 0; /* set margins as desired */
+	font: bold 11px verdana, arial, sans-serif; /* set font as desired */
+	list-style-type: none;
+	padding: 3px 10px 3px 10px; /* THIRD number must change with respect to padding-top (X) below */
+	position:absolute;
+	margin-left:740px;
+	top:15px;	
+}
+

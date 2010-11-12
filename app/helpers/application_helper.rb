@@ -13,7 +13,7 @@ module ApplicationHelper
       when "new_post"
         {:class => 'selected'} if controller_name == "posts" && action_name == 'new'
       when "contacts"
-        {:class => 'selected'} if controller_name == section && action_name == 'new'
+        {:class => 'selected'} if controller_name == section && action_name != 'new'
     end
   end
 
@@ -32,4 +32,8 @@ module ApplicationHelper
       SITE_NAME
     end
   end
+  
+  def homepage?
+    controller_name == 'posts' && action_name == 'index'
+  end  
 end

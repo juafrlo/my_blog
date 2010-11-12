@@ -28,7 +28,7 @@ class ApplicationController < ActionController::Base
       redirect_to home_url
     end
   end
-  
+    
   private
   def authenticate_with_http
     authenticate_or_request_with_http_basic do |username, password|

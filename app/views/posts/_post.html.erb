@@ -1,6 +1,6 @@
 <div class="post_block">
-	<%= date_block(post.created_at.to_date) %>
-	<h2><%= post_title post %></h2>
+	<%= content_tag(homepage? ? :h2 : :h1, post_title(post))%>
+	<%= date_block(post.created_at.to_date) %><div class="clear"></div>
 	
 	<div class="post_body">
 		<%= textilize action_name != 'show' ? post.intro : post.body %>
