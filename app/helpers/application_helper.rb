@@ -26,11 +26,16 @@ module ApplicationHelper
   end
   
   def page_title
-    if controller_name == "posts" && action_name == "show"
-      "#{SITE_NAME}: #{@post.title}"
+    title = if controller_name == "posts" && action_name == "show"
+      @post.title
+    elsif controller_name == "contacts" && action_name == "index"
+      t(".contact")
+    elsif controller_name == "posts" && action_name == "search"
+      "Tags - #{params[:tag]}"
     else
       SITE_NAME
     end
+    title.include?(SITE_NAME) ? title : "#{SITE_NAME} - #{title}"
   end
   
   def homepage?
