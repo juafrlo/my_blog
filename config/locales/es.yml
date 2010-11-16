@@ -94,6 +94,9 @@ es:
       rss: RSS
       cloud: Tags
       some_projects: Algunos proyectos 
+      contact_intro: Mi nombre es Juan de Frías. Soy un Ingeniero Superior de Telecomunicaciones especializado en Telemática con experiencia contrastada en el mundo del desarrollo web.
+      how_to_contact: Ante cualquier duda o consulta puedes contactar conmigo a través del siguiente formulario
+      posts_by_tag: Pots filtrados por tag
     header:
       subtitle: Desarrollo web ágil      
   sessions:
