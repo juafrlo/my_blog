@@ -1,6 +1,8 @@
 class PostsController < ApplicationController
+  before_filter :find_seo_id
   before_filter :admin_required, :except => [:index, :show, :search]
   before_filter :only_active, :only =>[:show]
+  
   # GET /posts
   # GET /posts.xml
   def index
@@ -101,5 +103,9 @@ class PostsController < ApplicationController
   def only_active
     @post = Post.find(params[:id])
     redirect_to home_url if !@post.active && session[:admin].blank?
+  end
+  
+  def find_seo_id
+    params[:id] = params[:id].scan(/.+-(.+)?/).to_s.to_i unless params[:id].blank?
   end
 end

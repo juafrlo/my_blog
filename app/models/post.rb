@@ -6,7 +6,7 @@ class Post < ActiveRecord::Base
   named_scope :active, :conditions => {:active => true}
   
   def to_param
-    id.to_s << "-" << (title ? title.parameterize : '' )
+    (title ? title.parameterize : '' ) << "-" << id.to_s
   end
   
   def self.find_by_regexp_title(title)
