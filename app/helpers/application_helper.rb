@@ -40,7 +40,7 @@ module ApplicationHelper
   
   def page_description
     if post_page?
-      @post.intro[0..299].gsub(/<a href=\".+\">/,'').gsub(/<\/a>/,'')
+      @post.intro.to_s[0..299].gsub(/<a href=\".+\">/,'').gsub(/<\/a>/,'')
     elsif controller_name == "contacts" && action_name == "index"
       "#{t('.contact_intro')} #{t('.how_to_contact')}"  
     elsif tag_page?
