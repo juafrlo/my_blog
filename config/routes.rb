@@ -1,9 +1,12 @@
 ActionController::Routing::Routes.draw do |map|
+  map.sitemap '/sitemap.xml', :controller => 'sitemap'
+  
   map.resources :contacts, :only => [:index, :create], :as => 'contacto'
 
   map.resources :comments, :only => [:create, :destroy]
 
   map.resources :posts, :collection => {:search => :get}
+  map.resources :tags, :only => [:show]
   
   map.home '', :controller => 'posts', :action => 'index'
   map.resources :sessions

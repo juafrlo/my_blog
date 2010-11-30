@@ -31,7 +31,7 @@ module ApplicationHelper
     elsif controller_name == "contacts" && action_name == "index"
       t(".contact")
     elsif tag_page?
-      "Tags - #{params[:tag]}"
+      "Tags - #{params[:id]}"
     else
       SITE_NAME
     end
@@ -44,7 +44,7 @@ module ApplicationHelper
     elsif controller_name == "contacts" && action_name == "index"
       "#{t('.contact_intro')} #{t('.how_to_contact')}"  
     elsif tag_page?
-      "#{t('.posts_by_tag')} - #{params[:tag]}"
+      "#{t('.posts_by_tag')} #{params[:id]}"
     else 
       DESCRIPTION
     end
@@ -59,6 +59,10 @@ module ApplicationHelper
   end
   
   def tag_page?
-    controller_name == "posts" && action_name == "search"
+    controller_name == "tags" && action_name == "show"
+  end
+  
+  def absolute_url(relative_path = nil)
+    "http://#{request.host}#{relative_path}"
   end
 end

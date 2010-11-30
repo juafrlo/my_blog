@@ -1,6 +1,6 @@
 module PostsHelper
   def post_title(post)
-    action_name == 'show' ? post.title : link_to(post.title,post)
+    post_page? ? post.title : link_to(post.title,post)
   end
   
   def date_block(date) 
@@ -14,7 +14,7 @@ module PostsHelper
   def post_tags(post)
     html = ""
     post.tags.each do |tag|
-      html += link_to(tag.name, search_posts_path(:tag => tag.name))
+      html += link_to(tag.name, tag_path(tag))
       html += ", " unless tag == post.tags.last
     end
     html
@@ -37,5 +37,4 @@ module PostsHelper
   		link_to(t('.edit_post'), edit_post_path(post))
     end if admin? && action_name != 'index'
   end
-
 end

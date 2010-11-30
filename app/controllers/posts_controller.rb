@@ -89,11 +89,12 @@ class PostsController < ApplicationController
   end
   
   def search
-    @posts = unless params[:tag].blank?    
-      Post.ordered.find_tagged_with(params[:tag]).paginate :per_page => 5,
-       :page => params[:page]
+    unless params[:tag].blank?    
+      headers["Status"] = "301 Moved Permanently"  
+      redirect_to tag_path(params[:tag].parameterize.to_s)
+      return
     else
-      Post.ordered.find_by_regexp_title(params[:title]).paginate :per_page => 5,
+      @posts = Post.ordered.find_by_regexp_title(params[:title]).paginate :per_page => 5,
        :page => params[:page]
     end
     render :action => 'index'

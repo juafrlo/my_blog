@@ -3,7 +3,7 @@
 	<%= date_block(post.created_at.to_date) %><div class="clear"></div>
 	
 	<div class="post_body">
-		<%= textilize action_name != 'show' ? post.intro : post.body %>
+		<%= textilize post_page? ? post.body : post.intro %>
 	</div>
   <% if action_name != 'show' %>
   	<%= link_to t('.view_more'), post_path(post) %> |
