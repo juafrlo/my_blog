@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>http://localhost</loc>
+  </url>
+  <url>
+    <loc>http://localhost/contacto</loc>
+  </url>
+  <url>
+    <loc>http://localhost/posts/test-dkasdak-dsadsa-dsadlksa-dsa-dsadasdasdas-d-asd-asd-1</loc>
+  </url>
+  <url>
+    <loc>http://localhost/tags/testes</loc>
+  </url>
+  <url>
+    <loc>http://localhost/tags/dsadas</loc>
+  </url>
+  <url>
+    <loc>http://localhost/tags/asdadd</loc>
+  </url>
+  <url>
+    <loc>http://localhost/tags/dsada</loc>
+  </url>
+  <url>
+    <loc>http://localhost/tags/otro-tag</loc>
+  </url>
+  <url>
+    <loc>http://localhost/tags/dsadasssss</loc>
+  </url>
+</urlset>
