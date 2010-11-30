@@ -61,8 +61,4 @@ module ApplicationHelper
   def tag_page?
     controller_name == "tags" && action_name == "show"
   end
-  
-  def absolute_url(relative_path = nil)
-    "http://#{request.host}#{relative_path}"
-  end
 end

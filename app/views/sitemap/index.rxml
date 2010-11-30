@@ -1,19 +1,19 @@
 xml.instruct! :xml, :version => '1.0'
 xml.tag! 'urlset', 'xmlns' => "http://www.sitemaps.org/schemas/sitemap/0.9" do
   xml.tag! 'url' do
-    xml.tag! 'loc', absolute_url
+    xml.tag! 'loc', home_url
   end
   xml.tag! 'url' do
-    xml.tag! 'loc', absolute_url(url_for(:controller => :contacts))
+    xml.tag! 'loc', contacts_url
   end
   @posts.each do |post|
     xml.tag! 'url' do
-      xml.tag! 'loc', absolute_url(url_for(post))
+      xml.tag! 'loc', post_url(post)
     end
   end
   @tags.each do |tag|
     xml.tag! 'url' do
-      xml.tag! 'loc', absolute_url(url_for(tag))
+      xml.tag! 'loc', tag_url(tag)
     end
   end  
 end
