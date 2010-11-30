@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
   helper :all # include all helpers, all the time
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
   helper_method :admin?
+  before_filter :redirect_pages_without_www
   
   # Comment once is correct
   #USERNAME, PASSWORD = "admin", "test"
@@ -28,6 +29,14 @@ class ApplicationController < ActionController::Base
       redirect_to home_url
     end
   end
+  
+  def redirect_pages_without_www
+    if RAILS_ENV == 'production' && request.host.scan(/^www./).blank?
+      headers["Status"] = "301 Moved Permanently"  
+      redirect_to request.url.gsub('http://','http://www.')
+    end
+  end
+    
     
   private
   def authenticate_with_http
