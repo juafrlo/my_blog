@@ -26,6 +26,7 @@ class ApplicationController < ActionController::Base
   def admin_required
     if session[:admin].blank?
       flash[:error] = t("controllers.application.not_authorized")
+      headers["Status"] = "301 Moved Permanently"  
       redirect_to home_url
     end
   end
