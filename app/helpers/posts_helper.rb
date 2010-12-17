@@ -37,4 +37,13 @@ module PostsHelper
   		link_to(t('.edit_post'), edit_post_path(post))
     end if admin? && action_name != 'index'
   end
+  
+  def tag_h1
+    if tag_page?
+    	html = "<div id='nofloat'>"
+    		html += "<h1>#{t('.posts_tagged_with')} #{@tag.name}:</h1>"
+    	html += "</div>"
+    	html +="<br/>"
+    end    
+  end
 end

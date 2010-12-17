@@ -32,6 +32,8 @@ module ApplicationHelper
       t(".contact")
     elsif tag_page?
       "Tags - #{params[:id]}"
+    elsif !params[:page].blank?
+      "#{SITE_NAME} - #{t('.Posts_index')} - #{t('.Page')} #{params[:page]}"
     else
       SITE_NAME
     end
@@ -45,6 +47,8 @@ module ApplicationHelper
       "#{t('.contact_intro')} #{t('.how_to_contact')}"  
     elsif tag_page?
       "#{t('.posts_by_tag')} #{params[:id]}"
+    elsif !params[:page].blank?
+      "#{DESCRIPTION}. #{t('.Posts_index')}. #{t('.Page')} #{params[:page]}"
     else 
       DESCRIPTION
     end
@@ -60,5 +64,9 @@ module ApplicationHelper
   
   def tag_page?
     controller_name == "tags" && action_name == "show"
+  end
+  
+  def list_page?
+    homepage? || tag_page?
   end
 end

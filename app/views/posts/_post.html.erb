@@ -1,5 +1,5 @@
 <div class="post_block">
-	<%= content_tag(homepage? ? :h2 : :h1, post_title(post))%>
+	<%= content_tag(list_page? ? :h2 : :h1, post_title(post))%>
 	<%= date_block(post.created_at.to_date) %><div class="clear"></div>
 	
 	<div class="post_body">
