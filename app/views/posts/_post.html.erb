@@ -1,6 +1,22 @@
 <div class="post_block">
 	<%= content_tag(list_page? ? :h2 : :h1, post_title(post))%>
 	<%= date_block(post.created_at.to_date) %><div class="clear"></div>
+	 
+	<% unless list_page? %>
+		<div id="ad_block_hor">
+			<script type="text/javascript"><!--
+			google_ad_client = "ca-pub-6226687068928040";
+			/* Banner horizontal */
+			google_ad_slot = "2564460177";
+			google_ad_width = 468;
+			google_ad_height = 60;
+			//-->
+			</script>
+			<script type="text/javascript"
+			src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+			</script>
+		</div>
+	<% end %>
 	
 	<div class="post_body">
 		<%= textilize post_page? ? post.body : post.intro %>
