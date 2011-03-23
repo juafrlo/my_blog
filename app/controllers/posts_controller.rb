@@ -103,7 +103,10 @@ class PostsController < ApplicationController
   protected
   def only_active
     @post = Post.find(params[:id])
-    redirect_to home_url if !@post.active && session[:admin].blank?
+    if !@post.active && session[:admin].blank?
+      headers["Status"] = "301 Moved Permanently"  
+      redirect_to home_url 
+    end
   end
   
   def find_seo_id
