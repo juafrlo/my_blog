@@ -31,7 +31,7 @@ module ApplicationHelper
     elsif controller_name == "contacts" && action_name == "index"
       t(".contact")
     elsif tag_page?
-      "Tags - #{params[:id]}"
+      "#{params[:id]}"
     elsif !params[:page].blank?
       "#{SITE_NAME} - #{t('.Posts_index')} - #{t('.Page')} #{params[:page]}"
     else
