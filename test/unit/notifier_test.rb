@@ -16,6 +16,5 @@ class NotifierTest < ActionMailer::TestCase
         :extra_field => ''
       )
     end
-    assert_response :success
   end
 end
