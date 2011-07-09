@@ -16,6 +16,12 @@
 	<%= stylesheet_link_tag 'ie8' %>
 	<![endif]-->
   <%= javascript_include_tag :defaults, :cache => true %>
+
+  <% if post_page?%>
+    <script type="text/javascript" src="https://apis.google.com/js/plusone.js">
+      {lang: 'es'}
+    </script>
+  <% end %>
 </head>
 
 <body>
