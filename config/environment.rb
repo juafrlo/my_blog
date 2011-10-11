@@ -37,10 +37,6 @@ Rails::Initializer.run do |config|
   # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
   # Run "rake -D time" for a list of tasks for finding time zone names.
   config.time_zone = "Madrid"
-  SITE_NAME = ""
-  KEYWORDS = "Juan de Frías, blog, Ruby on Rails, tecnología, desarrollo web ágil"
-  DESCRIPTION = "Blog de Juan de Frías sobre desarrollo web ágil, con especial atención a Ruby on Rails"
-
   # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
   # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
   # config.i18n.default_locale = :de
@@ -52,3 +48,6 @@ require 'coderay'
 require 'redclothcoderay'
 
 RedclothCoderay.coderay_options :lang => :ruby, :css => :class
+SITE_NAME = "Juan de Frías"
+KEYWORDS = "Juan de Frías, blog, Ruby on Rails, tecnología, desarrollo web ágil"
+DESCRIPTION = "Blog de Juan de Frías sobre desarrollo web ágil, con especial atención a Ruby on Rails"
