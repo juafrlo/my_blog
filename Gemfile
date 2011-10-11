@@ -9,4 +9,5 @@ gem 'RedCloth'
 gem 'coderay'
 gem "redclothcoderay", "~> 0.3.6"
 gem 'will_paginate', "~> 2.3.16"
+gem 'md5'
 

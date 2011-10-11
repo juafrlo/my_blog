@@ -1,4 +1,4 @@
-require 'md5'
+require 'digest'
 module CommentsHelper
   def gravatar_url_for(email, options = {})      
     url_for(
