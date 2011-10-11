@@ -27,3 +27,8 @@ config.action_mailer.raise_delivery_errors = false
 # Enable threaded mode
 # config.threadsafe!
 ActionMailer::Base.delivery_method = :sendmail
+
+
+SITE_NAME = ""
+KEYWORDS = ""
+DESCRIPTION = ""

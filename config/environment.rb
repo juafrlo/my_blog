@@ -43,7 +43,3 @@ require 'coderay'
 require 'redclothcoderay'
 
 RedclothCoderay.coderay_options :lang => :ruby, :css => :class
-
-SITE_NAME = ""
-KEYWORDS = ""
-DESCRIPTION = ""
