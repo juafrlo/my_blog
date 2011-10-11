@@ -119,7 +119,6 @@ class PostsController < ApplicationController
         old_id = params[:id].scan(/(\d+).+/).to_s
         redirect_to request.url.gsub(/#{old_id}-/,'') << "-#{old_id}"
       end
-      h
     end
   end
 end
