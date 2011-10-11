@@ -47,8 +47,8 @@ Rails::Initializer.run do |config|
 end
 
 
-require 'rubygems'
 require 'redcloth'
 require 'coderay'
 require 'redclothcoderay'
+
 RedclothCoderay.coderay_options :lang => :ruby, :css => :class

@@ -10,6 +10,6 @@ class Post < ActiveRecord::Base
   end
   
   def self.find_by_regexp_title(title)
-    Post.find(:all, :conditions => ["title Regexp ?", title.blank? ? '&' : title])
+    Post.find(:all, :conditions => ["title ~* (?)", title.blank? ? '&' : title])
   end
 end
