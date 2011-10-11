@@ -41,5 +41,9 @@ end
 require 'redcloth'
 require 'coderay'
 require 'redclothcoderay'
+require 'will_paginate'
 
 RedclothCoderay.coderay_options :lang => :ruby, :css => :class
+SITE_NAME = ""
+KEYWORDS = ""
+DESCRIPTION = ""
