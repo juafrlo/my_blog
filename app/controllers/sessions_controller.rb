@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
   def create
-    if params[:password] == APP_CONFIG['password']
+    if params[:password] == RAILS_ENV == 'production' ? ENV['ADMIN_PASS'] : APP_CONFIG['password']
       flash[:notice] = t("controllers.sessions.successfully_logged_in")
       session[:admin] = true
       redirect_to home_url
