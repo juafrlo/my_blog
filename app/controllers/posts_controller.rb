@@ -111,7 +111,7 @@ class PostsController < ApplicationController
   
   def find_seo_id
     unless params[:id].blank?
-      seo_id = params[:id].scan(/.+-(.+)?/).to_s.to_i
+      seo_id = params[:id].scan(/.+-(.+)?/).flatten.first.to_i rescue 0
       if seo_id != 0
         params[:id] = seo_id
       else
@@ -119,7 +119,7 @@ class PostsController < ApplicationController
         old_id = params[:id].scan(/(\d+).+/).to_s
         redirect_to request.url.gsub(/#{old_id}-/,'') << "-#{old_id}"
       end
-      
+      h
     end
   end
 end
