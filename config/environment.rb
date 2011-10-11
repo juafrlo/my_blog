@@ -43,3 +43,6 @@ require 'coderay'
 require 'redclothcoderay'
 
 RedclothCoderay.coderay_options :lang => :ruby, :css => :class
+SITE_NAME = "Juan de Frías"
+KEYWORDS = "Juan de Frías, blog, Ruby on Rails, tecnología, desarrollo web ágil"
+DESCRIPTION = "Blog de Juan de Frías sobre desarrollo web ágil, con especial atención a Ruby on Rails"
