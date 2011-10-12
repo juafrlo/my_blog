@@ -90,8 +90,7 @@ class PostsController < ApplicationController
   
   def search
     unless params[:tag].blank?    
-      headers["Status"] = "301 Moved Permanently"  
-      redirect_to tag_path(params[:tag].parameterize.to_s)
+      head :moved_permanently, :location => tag_path(params[:tag].parameterize.to_s)
       return
     else
       @posts = Post.ordered.find_by_regexp_title(params[:title]).paginate :per_page => 5,
@@ -104,8 +103,7 @@ class PostsController < ApplicationController
   def only_active
     @post = Post.find(params[:id])
     if !@post.active && session[:admin].blank?
-      headers["Status"] = "301 Moved Permanently"  
-      redirect_to home_url 
+      head :moved_permanently, :location => home_url
     end
   end
   
@@ -115,9 +113,9 @@ class PostsController < ApplicationController
       if seo_id != 0
         params[:id] = seo_id
       else
-        headers["Status"] = "301 Moved Permanently"  
         old_id = params[:id].scan(/(\d+).+/).to_s
-        redirect_to request.url.gsub(/#{old_id}-/,'') << "-#{old_id}"
+        new_url = request.url.gsub(/#{old_id}-/,'') << "-#{old_id}"
+        head :moved_permanently, :location => new_url
       end
     end
   end
