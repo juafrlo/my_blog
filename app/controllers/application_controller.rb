@@ -33,8 +33,7 @@ class ApplicationController < ActionController::Base
   
   def redirect_pages_without_www
     if RAILS_ENV == 'production' && request.host.scan(/^www./).blank?
-      headers["Status"] = "301 Moved Permanently"  
-      redirect_to request.url.gsub('http://','http://www.').gsub('.heroku','')
+      head :moved_permanently, :location => request.url.gsub('http://','http://www.').gsub('.heroku','')
     end
   end
     
