@@ -19,7 +19,7 @@ class Notifier < ActionMailer::Base
   protected
   def setup_email(element)
     content_type "text/html"
-    @recipients  = RAILS_ENV == 'production' ? "#{ENV['email']}" : "#{ENV['email']}"
+    @recipients  = RAILS_ENV == 'production' ? "#{ENV['email']}" : "#{APP_CONFIG['email']}"
     @subject     = RAILS_ENV == 'production' ?  "#{ENV['site_url']} blog: " : "#{APP_CONFIG['site_url']} blog: "
     @from        = element.email
     @sent_on     = Time.now
