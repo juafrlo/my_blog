@@ -7,7 +7,6 @@ class Notifier < ActionMailer::Base
     else
       @url = "http://#{ENV['site_url']}#{post_path(comment.post)}"
     end
-    end
     @post = comment.post
   end  
   
