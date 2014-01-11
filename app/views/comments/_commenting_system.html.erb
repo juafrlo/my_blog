@@ -1,5 +1,5 @@
 <h3><%= t('.Comments') %></h3>
-<% if @post.comments.blank? %> 
+<% if @post.comments.blank? %>
   <span id="no_comments"><%= t('.no_comments') %></span>
 <% else %>
   <%= render @post.comments %>
@@ -26,17 +26,12 @@
 	  <span><%= f.label :site_url, t('.site_url') %></span>
 	  <%= f.text_field :site_url %>
 	</p>
-	
-	<p class="extra_field">
-	  <span><%= f.label :extra_field, t('.extra_field') %></span>
-	  <%= f.text_field :extra_field %>
-  </p>
-	
+
 	<p>
 		<span><%= f.label :body, t('.body') %></span>
 		<%= f.text_area :body %>
 	</p>
-	
+
 	<p>
 		<%= f.submit t('.send'), :class => 'submit' %>
 		<%= image_tag 'spinner.gif', :id => 'spinner', :style => 'display:none;' %>

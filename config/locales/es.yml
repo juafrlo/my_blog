@@ -5,30 +5,30 @@ es:
       # When no format has been given, it uses default.
       # You can provide other formats here if you like!
       default: "%e/%m/%Y"
-      short: "%e de %b" 
-      long: "%e de %B de %Y" 
+      short: "%e de %b"
+      long: "%e de %B de %Y"
       month: "%b"
       day: "%e"
       year: "%Y"
-  
+
     day_names: [Domingo, Lunes, Martes, Miércoles, Jueves, Viernes, Sábado]
     abbr_day_names: [Dom, Lun, Mar, Mie, Jue, Vie, Sab]
-  
+
     # Don't forget the nil at the beginning; there's no such thing as a 0th month
     month_names: [~, Enero, Febrero, Marzo, Abril, Mayo, Junio, Julio, Agosto, Setiembre, Octubre, Noviembre, Diciembre]
     abbr_month_names: [~, Ene, Feb, Mar, Abr, May, Jun, Jul, Ago, Set, Oct, Nov, Dic]
     # Used in date_select and datime_select.
     order: [ :day, :month, :year ]
-  
+
   time:
     formats:
       default: "%A, %e de %B de %Y %H:%M:%S %z"
-      short: "%e de %b %H:%M" 
-      long: "%e de %B de %Y %H:%M" 
+      short: "%e de %b %H:%M"
+      long: "%e de %B de %Y %H:%M"
       custom: "%d/%m/%Y %H:%M:%S"
-    am: "am" 
-    pm: "pm" 
-  
+    am: "am"
+    pm: "pm"
+
   activerecord:
     attributes:
       comment:
@@ -38,21 +38,22 @@ es:
       contact:
         name: "Nombre"
         body: "Mensaje"
-      
+
     errors:
       template:
         header:
-          one:   "No se pudo guardar {{model}} porque se encontró 1 error" 
-          other:  "No se pudo guardar {{model}} porque se encontraron {{count}} errores" 
+          one:   "No se pudo guardar {{model}} porque se encontró 1 error"
+          other:  "No se pudo guardar {{model}} porque se encontraron {{count}} errores"
         # The variable :count is also available
-        body: "Se encontraron problemas con los siguientes campos:" 
+        body: "Se encontraron problemas con los siguientes campos:"
 
       # The values :model, :attribute and :value are always available for interpolation
       # The value :count is available when applicable. Can be used for pluralization.
       messages:
-        inclusion: "no está incluido en la lista" 
-        exclusion: "está reservado" 
-        invalid: "no es válido" 
+        inclusion: "no está incluido en la lista"
+        exclusion: "está reservado"
+        invalid: "no es válido"
+        exclusion: "no permite la palabra %{value}"
         confirmation: "no coincide con la confirmación"
         accepted: "debe ser aceptado"
         empty: "no puede estar vacío"
@@ -69,8 +70,8 @@ es:
         less_than_or_equal_to: "debe ser menor que o igual a {{count}}"
         odd: "debe ser impar"
         even: "debe ser par"
-  
-  controllers: 
+
+  controllers:
     application:
       not_authorized: Acceso denegado
     posts:
@@ -93,14 +94,14 @@ es:
       subscribe: Subscríbete
       rss: RSS
       cloud: Tags
-      some_projects: Algunos proyectos 
+      some_projects: Algunos proyectos
       contact_intro: Mi nombre es Juan de Frías. Soy un Ingeniero Superior de Telecomunicaciones especializado en Telemática con experiencia contrastada en el mundo del desarrollo web.
       how_to_contact: Ante cualquier duda o consulta puedes contactar conmigo a través del siguiente formulario
-      posts_by_tag: Información filtrara por el tema 
+      posts_by_tag: Información filtrara por el tema
       Posts_index: Índice de posts
       Page: Página
     header:
-      subtitle: Desarrollo web ágil      
+      subtitle: Desarrollo web ágil
   sessions:
     new:
       login: Login
@@ -119,7 +120,7 @@ es:
       comment: Comenta
       no_comments: 0 comentarios
       comments_count:
-        one:  "1 comentario" 
+        one:  "1 comentario"
         other: "{{count}} comentarios"
     new:
       create: Publicar
@@ -130,7 +131,7 @@ es:
     index:
       news: Últimos posts
       posts_tagged_with: Posts sobre
-    form: 
+    form:
       how_to_put_code: ¿Cómo puedo poner código?
       how_to_put_code_explanation: "Para poder poner código, dicho código debe estar rodeado por los tags:<br/>[enter]<br/>< source><br/> <span id='code_intro'>code</span><br/>< /source><br/>[enter]"
       active: Publicar
@@ -161,12 +162,13 @@ es:
       extra_field: Campo extra
       email: Email (no se mostrará)
       no_comments: No hay comentarios todavía para este post
+      no_spam: "No quiero spam con: {{word}}"
     create:
       complete_form: Debes introducir un comentario
     comment:
       anonymous: Anónimo
       delete: Borrar
-      are_you_sure: "¿Estás seguro que quieres borrar este comentario?"  
+      are_you_sure: "¿Estás seguro que quieres borrar este comentario?"
     email:
       comment_notification_subject: Alguien ha comentado un post
       notification_body: Alguien ha comentado un post en tu blog. Puedes consultarlo en el siguiente enlace

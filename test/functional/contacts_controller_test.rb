@@ -28,6 +28,17 @@ class ContactsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test "should not allow black list words" do
+    assert_no_difference('Contact.count') do
+      post :create,
+       :contact => {
+         :body => 'blacklist-word', :name => 'name',
+         :email => 'test@test.com', :extra_field => "Text"
+       }
+    end
+    assert_response :success
+  end
+
   test "should not create without validation" do
     assert_no_difference('Contact.count') do
       post :create,

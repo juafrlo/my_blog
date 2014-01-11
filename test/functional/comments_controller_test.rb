@@ -16,7 +16,7 @@ class CommentsControllerTest < ActionController::TestCase
     end
     assert_response :success
   end
-  
+
   test "should not allow spam" do
     spam_params = comment_params
     spam_params.delete(:extra_field)
@@ -24,8 +24,17 @@ class CommentsControllerTest < ActionController::TestCase
       post :create, :comment => spam_params
     end
     assert_response :success
-  end  
-  
+  end
+
+  test "should not allow blacklist words" do
+    spam_params = comment_params
+    spam_params[:body] = 'blacklist-word'
+    assert_no_difference('Comment.count') do
+      post :create, :comment => spam_params
+    end
+    assert_response :success
+  end
+
   test "admin should destroy comment" do
     assert_difference('Comment.count', -1) do
       delete :destroy, {:id => comments(:one).to_param}, {:admin => true}

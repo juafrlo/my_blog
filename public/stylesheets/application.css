@@ -122,7 +122,7 @@ a img {
 #post h1, #post h2{
 	display:inline;
 	float:right;
-	width: 500px;	
+	width: 500px;
 	height: 0px;
 }
 
@@ -380,7 +380,7 @@ ul#tabnav { /* general settings */
 	padding: 3px 10px 3px 10px; /* THIRD number must change with respect to padding-top (X) below */
 	position:absolute;
 	margin-left:740px;
-	top:0px;	
+	top:0px;
 }
 
 .logedd_tab {
@@ -419,7 +419,7 @@ ul#tabnav li a { /* settings for all tab links */
 	margin-right: 0px; /* set additional spacing between tabs as desired */
 	text-decoration: none;
 	padding-bottom:10px;
-	border-bottom:none; 
+	border-bottom:none;
 }
 
 ul#tabnav a:hover { /* settings for hover effect */
@@ -435,7 +435,7 @@ ul#tabnav a:hover { /* settings for hover effect */
 .post_block{
 	margin-bottom:40px;
 }
- 
+
 /* Comments */
 .comment{
 	display:block;
@@ -476,11 +476,11 @@ ul#tabnav a:hover { /* settings for hover effect */
 
 .new_comment span{
 	display: block;
-	width: 250px; 
+	width: 250px;
 }
 
 .new_comment textarea{
-	min-height: 100px;		
+	min-height: 100px;
 }
 
 .new_comment #spinner{
@@ -496,17 +496,12 @@ ul#tabnav a:hover { /* settings for hover effect */
 	width: 480px;
 }
 
-
-p.extra_field{
-	display: none;
-}
-
 #no_comments{
 	padding-left: 65px;
 }
 
 #comment_submit{
-	width: auto !important; 
+	width: auto !important;
 }
 /* End of comments */
 
