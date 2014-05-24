@@ -32,6 +32,12 @@
 		<%= f.text_area :body %>
 	</p>
 
+  <p>
+    <%= recaptcha_tags(:ajax => true,
+      :display => {:theme =>'white',
+      :custom_translations => { :instructions_visual => t(:recaptcha_text) }}) %>
+  </p>
+
 	<p>
 		<%= f.submit t('.send'), :class => 'submit' %>
 		<%= image_tag 'spinner.gif', :id => 'spinner', :style => 'display:none;' %>

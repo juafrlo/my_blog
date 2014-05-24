@@ -6,7 +6,7 @@ class CommentsController < ApplicationController
   def create
     @comment = Comment.new(params[:comment])
     @comment.user_ip = request.remote_ip
-    @comment.save
+    verify_recaptcha(@comment) && @comment.save
   end
 
   # DELETE /comments/1

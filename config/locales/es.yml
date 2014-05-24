@@ -177,3 +177,7 @@ es:
   paginator:
     previous: "<<"
     next:  >>
+  recaptcha_text: "Escriba las dos palabras"
+  recaptcha:
+    errors:
+      verification_failed: Las palabras de verificación son incorrectas. Por favor, prueba de nuevo
